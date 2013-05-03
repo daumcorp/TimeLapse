@@ -5,6 +5,7 @@ if test -z "$detected_device"; then
 	exit 1
 fi
 DIR=/home/pi/public_html/lapse
+mkdir -p $DIR/logs
 cd $DIR
 ## take picture
 gphoto2 \
