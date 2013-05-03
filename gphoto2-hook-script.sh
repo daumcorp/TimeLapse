@@ -13,7 +13,7 @@ case "$ACTION" in
     download)
         echo "$(date '+%Y-%m-%d %T') hook : download to $ARGUMENT"
 #	mv $ARGUMENT image.jpg
-	scp $ARGUMENT ezhong@ezc:~/public_html/lapse/pics
+	scp $ARGUMENT ezhong@ezc:~/public_html/lapse/pics/original
 	rm -rf $ARGUMENT
         ;;
     stop)
