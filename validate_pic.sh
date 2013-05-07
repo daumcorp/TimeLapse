@@ -27,7 +27,14 @@ env LANG=C /usr/bin/gphoto2 \
 --filename "G6_%Y%m%d-%H%M-%f.%C" \
 >> $DIR/logs/gphoto2.log 2>&1
 
-env LANG=C /usr/bin/gphoto2 --delete-file=$f
+## tail -2 logs/gphoto2.log | head -1 ## to acquire folder name
+
+g=`tail -2 $DIR/logs/gphoto2.log | head -1` ## "Downloading 'IMG_1801.JPG' from folder '/store_00010001/DCIM/118CANON'..."
+h="store"
+i=${h}${g#*${h}}
+j=/${i:0:28}
+
+env LANG=C /usr/bin/gphoto2 --delete-file=1 --folder=$j
 
 fi
 
