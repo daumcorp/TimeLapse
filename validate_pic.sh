@@ -34,7 +34,7 @@ h="store"
 i=${h}${g#*${h}}
 j=/${i:0:28}
 
-env LANG=C /usr/bin/gphoto2 --delete-file=1 --folder=$j
+env LANG=C /usr/bin/gphoto2 --delete-file=1 --folder=$j >> $DIR/logs/gphoto2-delete.log
 
 fi
 
