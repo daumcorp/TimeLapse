@@ -12,7 +12,9 @@ case "$ACTION" in
         ;;
     download)
         echo "$(date '+%Y-%m-%d %T') hook : download to $ARGUMENT"
-	scp $ARGUMENT ezhong@ezc:~/public_html/lapse/pics/original && rm -rf $ARGUMENT 
+	scp $ARGUMENT ezhong@ezc:~/public_html/lapse/pics/original && \
+		rm -rf $ARGUMENT && \
+		curl -s http://ezc.dev.daum.net/h/lapse/uploaded.php?f=$ARGUMENT
         ;;
     stop)
 #        echo "$self: STOP"
