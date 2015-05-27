@@ -1,4 +1,4 @@
-# Time Lapse #
+# [DEPRECATED] Time Lapse #
 디지탈 카메라와 Raspberry Pi를 연결하여, 자동으로 사진을 찍어 서버로 전송하는 스크립트
 
 ## 실행 환경 ##
